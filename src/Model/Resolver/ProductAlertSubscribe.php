@@ -86,6 +86,13 @@ class ProductAlertSubscribe implements ResolverInterface
         return $this->inStockSubscribe($productId, $customerId, $store);
     }
 
+    /**
+     * @param $productId
+     * @param $customerId
+     * @param $store
+     * @return bool
+     * @throws GraphQlInputException
+     */
     public function inStockSubscribe($productId, $customerId, $store) {
         try {
             $product = $this->productRepository->getById($productId);
@@ -102,6 +109,13 @@ class ProductAlertSubscribe implements ResolverInterface
         return true;
     }
 
+    /**
+     * @param $productId
+     * @param $customerId
+     * @param $store
+     * @return bool
+     * @throws GraphQlInputException
+     */
     public function priceDropSubscribe($productId, $customerId, $store) {
         try {
             $product = $this->productRepository->getById($productId);

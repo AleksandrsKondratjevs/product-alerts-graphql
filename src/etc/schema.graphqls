@@ -8,5 +8,5 @@
 ##
 
 type Mutation {
-    productAlertSubscribe(productId: ID!, type: String!): Boolean @resolver(class: "\\ScandiPWA\\ProductAlertsGraphQl\\Model\\Resolver\\ProductAlertSubscribe") @doc(description:"Confirm customer account")
+    productAlertSubscribe(productId: ID!, type: String!): Boolean @resolver(class: "\\ScandiPWA\\ProductAlertsGraphQl\\Model\\Resolver\\ProductAlertSubscribe") @doc(description:"Customer subsribe for product alert")
 }
